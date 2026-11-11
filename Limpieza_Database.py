@@ -33,7 +33,7 @@ print("Columnas con valores nulos:\n\n", nulos[nulos>0])
 # En este caso, no hay ninguna columna con valores faltantes
 
 
-# 2. Normalización de datos
+# 2. Creación de Diagramas
 
 # Creamos unos diagramas que exploren la naturaleza de las variables para decidir
 # si es necesario normalizar las variables, y en tal caso que tipo de normalización.
@@ -96,8 +96,14 @@ plt.show()
 # por lo que una normalización con la función (min-max) / max
 # no es la mejor opción en este caso. Por ello vamos a estandarizar.
 
-
-#
+# Para evitar una fuga de datos, la estandarización se hará en
+# el archivo MLP donde se encontrará todo el código que entrenará la
+# red neuronal.
 
 
 # 3. Variable de Salida a Binario
+
+df['diagnosis'] = df['diagnosis'].map({'M': 1, 'B': 0})
+
+# df.to_csv("dataset_limpio.csv", index=False)
+# para crear el nuevo dataset con los cambios realizados
