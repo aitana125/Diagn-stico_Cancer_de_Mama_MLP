@@ -63,9 +63,9 @@ axes1[0, 1].set_title('Distribución de la Concavidad Media')
 sns.scatterplot(data=df, x='radius_mean', y='texture_worst', hue='diagnosis', ax=axes1[1, 0], palette=['#ff9999','#66b3ff'])
 axes1[1, 0].set_title('Relación Radio vs Peor Textura')
 
-# Scatter Plot Radio medio vs Peor Textura
+# Scatter Plot Lisura Media vs Error Estándar de Lisura
 sns.scatterplot(data=df, x='smoothness_mean', y='smoothness_se', hue='diagnosis', ax=axes1[1, 1], palette=['#ff9999','#66b3ff'])
-axes1[1, 1].set_title('Relación Radio vs Peor Textura')
+axes1[1, 1].set_title('Relación Lisura Media vs Error Estándar de Lisura')
 
 
 # 3. Figura de Boxplots

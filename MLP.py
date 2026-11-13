@@ -77,7 +77,7 @@ b2 = np.random.randn(1) * 0.1
 
 num_epoc = 200
 ET = np.zeros(num_epoc)  # error total
-learning_rate = 0.05  # condición de patada
+learning_rate = 0.01  # condición de patada
 
 for epoca in range(num_epoc):
     
